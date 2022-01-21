@@ -21,11 +21,11 @@ export const Search = () => {
 
       setResults(data.query.search);
     };
-    // first render of the search (term), no delay
+    // first search (first time the component is rendered) (term), no delay
     if (term && !results.length) {
       search();
     } else {
-      // initiate a timer of 1 second (wait before making the API request)
+      // for every additional type, set up a timer of 1 second (wait before making the API request)
       const timeoutId = setTimeout(() => {
         if (term) {
           search();
