@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Dropdown } from './Dropdown';
+import { Convert } from './Convert';
 
 const options = [
   { label: 'Africaans', value: 'af' },
   { label: 'Arabic', value: 'ar' },
-  { label: 'hidi', value: 'hi' },
+  { label: 'Hindi', value: 'hi' },
 ];
 
 export const Translate = () => {
@@ -29,6 +30,11 @@ export const Translate = () => {
         onSelectedChange={setLanguage}
         options={options}
       />
+      <hr />
+      <h3 className='ui header'>Output</h3>
+      <Convert text={text} language={language} />
     </div>
   );
 };
+
+// AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms - IwDlM;

@@ -28,7 +28,7 @@ const options = [
 export const App = () => {
   return (
     <div>
-      <Translate />{' '}
+      <Translate />
     </div>
   );
 };
