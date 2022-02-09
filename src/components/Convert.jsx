@@ -13,7 +13,7 @@ export const Convert = ({ language, text }) => {
     return () => {
       clearTimeout(timerId);
     };
-  }, [text]);
+  }, [text]); // the useEffect re-run whenever the text changes, [text]
 
   useEffect(() => {
     const doTranslations = async () => {

@@ -28,7 +28,7 @@ const options = [
 ];
 
 export const App = () => {
-  const [selected, setSelected] = useState(options[0]);
+  const [selected, setSelected] = useState(options[0]); // we provide this state down to the Dropdown as a prop
 
   return (
     <div>

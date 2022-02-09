@@ -18,7 +18,7 @@ export const Dropdown = ({ label, options, selected, onSelectedChange }) => {
         capture: true,
       });
     };
-  }, []);
+  }, []); // this useEffect only runs one time ([]), when we first render the component on the screen
 
   const renderedOptions = options.map(option => {
     if (option.value === selected.value) {
